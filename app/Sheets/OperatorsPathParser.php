@@ -10,7 +10,7 @@ class OperatorsPathParser implements PathParser
 
     public function parse(string $path): array
     {
-        $parts = explode('-', $path, 3);
+        $parts = explode('-', substr($path, 0, -3), 3);
 
         return [
             'category' => $parts[0],
