@@ -26,6 +26,7 @@ export default {
                 "php-gray-light": "#3D3D47",
                 "php-purple": "#6F75CF",
                 "php-purple-dark": "#444880",
+                "php-purple-light": "#9EA4FA",
                 "php-purple-bleak": "#606282",
                 "php-violet": "#D1D2E8",
                 "php-violet-dark": "#3A3A4F",

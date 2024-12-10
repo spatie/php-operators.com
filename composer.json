@@ -7,6 +7,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "gehrisandro/tailwind-merge-laravel": "^1.2",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9",
         "spatie/sheets": "^1.12"
