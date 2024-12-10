@@ -45,6 +45,13 @@ return [
             'throw' => false,
         ],
 
+        'content' => [
+            'driver' => 'local',
+            'root' => resource_path('content'),
+            'serve' => false,
+            'throw' => false,
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
