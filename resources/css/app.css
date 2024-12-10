@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "Commit Mono";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("/public/fonts/commit-mono-variable.woff2") format("woff2");
+    }
+}

@@ -10,11 +10,28 @@ export default {
         './resources/**/*.vue',
     ],
     theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },
+        fontFamily: {
+            mono: [
+                'Commit Mono, monospace',
+                {
+                    fontFeatureSettings: '"cv02", "cv03", "cv06", "cv07", "cv11", "ss03", "ss04", "ss05"',
+                },
+                ...defaultTheme.fontFamily.sans,
+            ],
         },
+        extend: {
+            colors: {
+                "php-gray": "#2B2B31",
+                "php-gray-dark": "#202023",
+                "php-gray-light": "#3D3D47",
+                "php-purple": "#6F75CF",
+                "php-purple-dark": "#444880",
+                "php-purple-bleak": "#606282",
+                "php-violet": "#D1D2E8",
+                "php-violet-dark": "#3A3A4F",
+                "php-violet-light": "#E6E6F2"
+            }
+        }
     },
     plugins: [],
 };
