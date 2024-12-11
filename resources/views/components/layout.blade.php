@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#E6E6F2" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#202023" media="(prefers-color-scheme: dark)" />
 
         <title>PHP operators</title>
 
