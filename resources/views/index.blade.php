@@ -36,7 +36,7 @@
                                     <span class="opacity-50">related</span>
                                     @foreach ($operator->related as $related)
                                         <x-operator
-                                            class="bg-php-violet-dark/50 hover:bg-php-violet-dark dark:bg-php-gray-light dark:hover:bg-php-gray"
+                                            class="bg-php-violet-dark/50 hover:bg-php-violet-dark dark:bg-php-gray-light dark:hover:bg-php-gray-light/50"
                                             title="{{ $operator->title }}"></x-operator>
                                     @endforeach
                                 </div>
@@ -65,12 +65,14 @@
     <footer class="w-full text-xs p-8 md:fixed md:bottom-0">
         <div class="flex justify-between items-center gap-6">
             <div class="flex items-center gap-3 lowercase">Made by
-                <a class="hover:opacity-90 active:translate-y-px" href="https://spatie.be/" target="_blank"><img class="w-16" src="{{ asset("assets/spatie_logo.svg") }}" alt="Spatie"></a>
+                <a class="hover:opacity-90 active:translate-y-px" href="https://spatie.be/" target="_blank"><img
+                        class="w-16" src="{{ asset('assets/spatie_logo.svg') }}" alt="Spatie"></a>
             </div>
             <div class="flex gap-3 text-base">
                 <button class="hover:opacity-70"><span class="fa-sharp-duotone fa-brightness"></span></button>
                 <button class="hover:opacity-70"><span class="fa-sharp-duotone fa-moon"></span></button>
-                <a href="https://github.com/spatie/php-operators/" class="hover:opacity-70"><span class="fa-brands fa-github"></span></a>
+                <a href="https://github.com/spatie/php-operators/" class="hover:opacity-70"><span
+                        class="fa-brands fa-github"></span></a>
             </div>
         </div>
     </footer>

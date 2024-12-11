@@ -1,7 +1,7 @@
 <header
-    class="flex text-sm py-8 px-8 border-php-violet/50 border-b md:border-b-0 bg-inherit z-10 transition-all dark:border-php-gray md:py-0 md:h-24 md:sticky md:top-0"
-    :class="{ 'md:border-b md:h-20': navAtTop }"
-    @scroll.window="navAtTop = (window.pageYOffset < 50) ? false: true">
+    class="flex text-sm py-8 px-8 border-php-violet/50 border-b bg-inherit z-10 transition-all dark:border-php-gray md:border-b-0 md:py-0 md:h-24 md:fixed md:w-full md:top-0"
+    :class="{ 'header-collapse': navAtTop }"
+    @scroll.window="navAtTop = (window.pageYOffset < 96) ? false: true">
     <div class="container flex flex-col items-center gap-6 max-w-4xl mx-auto md:flex-row md:gap-10">
         <a href="/" class="w-full max-w-44 md:max-w-56 active:translate-y-px">
             <x-logo></x-logo>

@@ -13,6 +13,10 @@
 }
 
 @layer components {
+    .header-collapse {
+        @apply border-b h-20 !important;
+    }
+
     .description:before {
         @apply -left-4 w-4 bg-php-purple-bleak rounded-l-lg md:-left-12 md:w-12 dark:bg-php-gray;
         content: '';
@@ -31,6 +35,7 @@
     @media screen(md) {
         .main {
             min-height: calc(100svh - theme(spacing.24));
+            margin-top: theme(spacing.24);
         }
     }
 }
