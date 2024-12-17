@@ -6,7 +6,7 @@
         <meta name="theme-color" content="#E6E6F2" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#202023" media="(prefers-color-scheme: dark)" />
 
-        <title>PHP operators</title>
+        <title>PHP Operators</title>
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
