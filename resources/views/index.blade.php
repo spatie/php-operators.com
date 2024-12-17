@@ -69,8 +69,8 @@
                         class="w-16" src="{{ asset('assets/spatie_logo.svg') }}" alt="Spatie"></a>
             </div>
             <div class="flex gap-3 text-base">
-                <button class="hover:opacity-70"><span class="fa-sharp-duotone fa-brightness"></span></button>
-                <button class="hover:opacity-70"><span class="fa-sharp-duotone fa-moon"></span></button>
+                <button class="hover:opacity-70" data-mode="light"><span class="fa-sharp fa-solid fa-brightness"></span></button>
+                <button class="hover:opacity-70" data-mode="dark"><span class="fa-sharp fa-solid fa-moon"></span></button>
                 <a href="https://github.com/spatie/php-operators/" class="hover:opacity-70"><span
                         class="fa-brands fa-github"></span></a>
             </div>
