@@ -8,7 +8,6 @@
 
                 <dl class="flex flex-wrap gap-2">
                     @foreach ($operators as $operator)
-                        {{--  Available attributes: category, index, slug, title, teaser, tags, related, contents --}}
                         <dt>
                             <x-operator
                                 class="bg-php-violet hover:bg-white dark:bg-php-gray dark:hover:bg-php-gray-light"
@@ -48,7 +47,7 @@
 
                                     <div
                                         class="relative bg-php-violet-dark rounded-md p-8 text-sm dark:bg-php-gray-dark">
-                                        <code>$a = 1 + 3; // 4</code>
+                                        {{ $operator->code }}
                                         <div class="absolute flex top-0 right-0 py-3 px-3 text-xs">
                                             <span><svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
                                                     viewBox="0 0 22 13">
