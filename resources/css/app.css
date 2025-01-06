@@ -34,6 +34,10 @@
         color: inherit;
         background-color: inherit;
     }
+
+    [x-cloak] {
+        display: none;
+    }
 }
 
 @layer components {

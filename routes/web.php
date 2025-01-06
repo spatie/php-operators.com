@@ -1,10 +1,7 @@
 <?php
 
+use App\Http\Controllers\OperatorsController;
 use Illuminate\Support\Facades\Route;
-use Spatie\Sheets\Facades\Sheets;
 
-Route::get('/', function () {
-    $operatorsByCategory = Sheets::all()->groupBy('category');
-
-    return view('index', ['operatorsByCategory' => $operatorsByCategory]);
-});
+Route::get('/', OperatorsController::class);
+Route::get('/operators/{operator}', OperatorsController::class);

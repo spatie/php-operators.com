@@ -1,7 +1,25 @@
 <x-layout>
     <x-header></x-header>
 
-    <main class="main">
+    <main
+        class="main"
+        x-data="{
+            currentOperator: '{{ $currentOperatorSlug ?? '' }}',
+            init() {
+                if (window.location.href.matches) {
+                    this.currentOperator = slugFromUrl(window.location.href);
+                }
+            },
+            selectOperator(slug) {
+                this.currentOperator = slug;
+                window.history.pushState({}, null, `/operators/${slug}`);
+            },
+            slugFromUrl(url) {
+                const parts = url.split('/').filter(Boolean);
+                return parts[parts.length - 1];
+            },
+        }"
+    >
         @foreach ($operatorsByCategory as $category => $operators)
             <article class="max-w-4xl mx-auto px-12 my-12 overflow-hidden first:mt-36">
                 <h2 class="lowercase mb-4 text-sm">{{ $category }}</h2>
@@ -10,10 +28,17 @@
                     @foreach ($operators as $operator)
                         <dt>
                             <x-operator
+                                :operator="$operator"
                                 class="bg-php-violet hover:bg-white dark:bg-php-gray dark:hover:bg-php-gray-light"
-                                title="{{ $operator->title }}"></x-operator>
+                                x-bind:class="{ '!bg-php-purple !text-white': currentOperator === '{{ $operator->slug }}' }"
+                            />
                         </dt>
-                        <dd class="basis-full my-8 last:mb-0" style="order:{{ count($operators) }}">
+                        <dd
+                            class="basis-full my-8 last:mb-0"
+                            style="order: {{ count($operators) }}"
+                            x-show="currentOperator === '{{ $operator->slug }}'"
+                            x-cloak
+                        >
                             <div
                                 class="description relative bg-php-purple-bleak text-white py-4 md:py-12 dark:bg-php-gray">
 
@@ -39,8 +64,9 @@
                                             <span class="opacity-50">related</span>
                                             @foreach ($operator->related as $related)
                                                 <x-operator
+                                                    :operator="$operator"
                                                     class="bg-php-violet-dark/50 hover:bg-php-violet-dark dark:bg-php-gray-light dark:hover:bg-php-gray-light/50"
-                                                    title="{{ $operator->title }}"></x-operator>
+                                                />
                                             @endforeach
                                         </div>
                                     </div>
