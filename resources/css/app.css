@@ -12,6 +12,28 @@
         font-display: swap;
         src: url('/public/fonts/commit-mono-variable.woff2') format('woff2');
     }
+
+    @font-face {
+        font-family: 'Commit Mono';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url('/public/fonts/commit-mono-variable.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Commit Mono';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url('/public/fonts/commit-mono-variable.woff2') format('woff2');
+    }
+
+    /* Override Tempest theme */
+    pre, code {
+        color: inherit;
+        background-color: inherit;
+    }
 }
 
 @layer components {
@@ -36,8 +58,8 @@
 
     @media screen(md) {
         .main {
-            min-height: calc(100svh - theme(spacing.24));
-            margin-top: theme(spacing.24);
+            min-height: calc(100svh - theme('spacing.24'));
+            margin-top: theme('spacing.24');
         }
     }
 }

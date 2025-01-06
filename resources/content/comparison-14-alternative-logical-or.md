@@ -9,13 +9,8 @@ related: ["||", "and", "xor"]
 ```php
 true or false; // true
 false or false; // false
-```
 
-Also works with truthy and falsy values:
-
-```php
+// Also works with truthy and falsy values:
 1 or 0; // true
 0 or ''; // false
 ```
-
-## Operator precedence

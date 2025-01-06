@@ -14,11 +14,8 @@ $a = true;
 $b = false;
 
 !$b; // true
-```
 
-Also works with truthy and falsy values:
-
-```php
+// Also works with truthy and falsy values:
 1 || 0; // true
 0 || ''; // false
 ```

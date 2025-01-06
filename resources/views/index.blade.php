@@ -19,7 +19,7 @@
 
                                 <div class="grid gap-4 md:grid-cols-2">
 
-                                    <div class="text-sm">
+                                    <div class="text-sm flex flex-col">
                                         <div class="flex items-center gap-6 mb-6">
                                             <p class="px-3 py-2 bg-php-purple text-white rounded-md font-semibold">
                                                 {{ $operator->title }}</p>
@@ -28,7 +28,7 @@
                                         <div class="mb-4">
                                             <p>{{ $operator->contents }}</p>
                                         </div>
-                                        <div class="flex gap-2 text-xs mb-3">
+                                        <div class="mt-auto flex gap-2 text-xs mb-3">
                                             <span class="opacity-50">tags</span>
                                             @foreach ($operator->tags as $tag)
                                                 <a href="#"
@@ -47,7 +47,7 @@
 
                                     <div
                                         class="relative bg-php-violet-dark rounded-md p-8 text-sm dark:bg-php-gray-dark">
-                                        {{ $operator->code }}
+                                        <pre><code>{{ $operator->code }}</code></pre>
                                         <div class="absolute flex top-0 right-0 py-3 px-3 text-xs">
                                             <span><svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
                                                     viewBox="0 0 22 13">

@@ -9,11 +9,8 @@ related: ["or"]
 ```php
 true || false; // true
 false || false; // false
-```
 
-Also works with truthy and falsy values:
-
-```php
+// Also works with truthy and falsy values:
 1 || 0; // true
 0 || ''; // false
 ```
