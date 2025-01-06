@@ -60,15 +60,16 @@
                                                     class="text-php-purple-light hover:text-white hover:underline dark:text-php-purple dark:hover:text-php-purple-light">{{ $tag }}</a>
                                             @endforeach
                                         </div>
-                                        <div class="flex items-center gap-3 text-xs">
+                                        {{-- @todo Related should be linked using operator slug in contents, not the operator itself --}}
+                                        {{-- <div class="flex items-center gap-3 text-xs">
                                             <span class="opacity-50">related</span>
                                             @foreach ($operator->related as $related)
                                                 <x-operator
-                                                    :operator="$operator"
+                                                    :operator="$operators->first(fn ($operator) => $operator->title === $related)"
                                                     class="bg-php-violet-dark/50 hover:bg-php-violet-dark dark:bg-php-gray-light dark:hover:bg-php-gray-light/50"
                                                 />
                                             @endforeach
-                                        </div>
+                                        </div> --}}
                                     </div>
 
                                     <div
