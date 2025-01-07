@@ -10,6 +10,7 @@
         "gehrisandro/tailwind-merge-laravel": "^1.2",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9",
+        "livewire/livewire": "^3.5",
         "spatie/sheets": "^1.12",
         "tempest/highlight": "^2.11"
     },

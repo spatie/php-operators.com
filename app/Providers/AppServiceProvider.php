@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Support\ServiceProvider;
 use Tempest\Highlight\Highlighter;
 
@@ -20,6 +21,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        VerifyCsrfToken::except([
+            'livewire/*',
+        ]);
     }
 }

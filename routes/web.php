@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\OperatorsController;
+use App\Livewire\Operators;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', OperatorsController::class);
-Route::get('/operators/{operator}', OperatorsController::class);
+Route::get('/', Operators::class);
+Route::get('/operators/{operator}', Operators::class);

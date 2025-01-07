@@ -9,10 +9,12 @@
         <title>PHP Operators</title>
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @livewireStyles
     </head>
-    <body class="font-mono antialiased bg-php-violet-light text-php-gray-dark dark:bg-php-gray-dark dark:text-white" x-data="{ navAtTop: false }">
+    <body class="font-mono antialiased bg-php-violet-light text-php-gray-dark dark:bg-php-gray-dark dark:text-white">
         {{ $slot }}
 
+        @livewireScripts
         <script src="https://kit.fontawesome.com/179125d0a6.js" crossorigin="anonymous"></script>
     </body>
 </html>
