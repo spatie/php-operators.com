@@ -15,6 +15,5 @@
         {{ $slot }}
 
         @livewireScripts
-        <script src="https://kit.fontawesome.com/179125d0a6.js" crossorigin="anonymous"></script>
     </body>
 </html>
