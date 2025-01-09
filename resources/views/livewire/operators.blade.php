@@ -1,4 +1,5 @@
 <div>
+    @persist('header')
     <header
         class="flex text-sm py-8 px-8 border-php-violet/50 border-b bg-php-violet-light dark:bg-php-gray-dark z-10 transition-all dark:border-php-gray md:border-b-0 md:py-0 md:h-24 md:fixed md:w-full md:top-0"
         :class="{ 'header-collapse': navAtTop }"
@@ -10,9 +11,9 @@
                 <x-logo></x-logo>
                 <h1 class="sr-only">PHP Operators</h1>
             </a>
-            <div class="relative h-12 w-full">
+            <div class="relative h-12 w-full" x-data="{ search: $wire.entangle('search').live }">
                 <input
-                    wire:model.live.debounce="search"
+                    x-model="search"
                     class="bg-php-violet rounded-full px-6 w-full h-full focus:ring-2 ring-inset ring-php-purple/15 outline-none placeholder:text-php-purple-dark/50 dark:bg-php-gray-light dark:placeholder:text-white/50 dark:ring-php-purple/50"
                     type="text" placeholder="Find out more about a PHP operator" />
                 @if($search)
@@ -33,6 +34,7 @@
             </div>
         </div>
     </header>
+    @endpersist
 
     <main class="main">
         @foreach ($operatorsByCategory as $category => $operators)
