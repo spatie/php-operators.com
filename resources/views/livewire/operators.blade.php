@@ -37,12 +37,12 @@
     @endpersist
 
     <main class="main">
-        @foreach ($operatorsByCategory as $category => $operators)
+        @foreach($operatorsByCategory as $category => $operators)
             <section class="max-w-4xl mx-auto px-12 my-12 first:mt-36">
                 <h2 class="lowercase mb-4 text-sm">{{ $category }}</h2>
                 <nav>
                     <ul class="flex flex-wrap gap-2">
-                        @foreach ($operators as $operator)
+                        @foreach($operators as $operator)
                             <li>
                                 <x-operator
                                     :operator="$operator"
@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="mt-auto flex gap-2 text-xs mb-3">
                                         <span class="opacity-50">tags</span>
-                                        @foreach ($currentOperator->tags as $tag)
+                                        @foreach($currentOperator->tags as $tag)
                                             <button
                                                 type="button"
                                                 class="text-php-purple-light hover:text-white hover:underline dark:text-php-purple dark:hover:text-php-purple-light"
@@ -77,16 +77,15 @@
                                             </button>
                                         @endforeach
                                     </div>
-                                    {{-- @todo Related should be linked using operator slug in contents, not the operator itself --}}
-                                    {{-- <div class="flex items-center gap-3 text-xs">
+                                    <div class="flex items-center gap-3 text-xs">
                                         <span class="opacity-50">related</span>
-                                        @foreach ($currentOperator->related as $related)
+                                        @foreach($relatedOperators as $relatedOperator)
                                             <x-operator
-                                                :operator="$related"
+                                                :operator="$relatedOperator"
                                                 class="bg-php-violet-dark/50 hover:bg-php-violet-dark dark:bg-php-gray-light dark:hover:bg-php-gray-light/50"
                                             />
                                         @endforeach
-                                    </div> --}}
+                                    </div>
                                 </div>
                                 <div
                                     class="relative bg-php-violet-dark rounded-md p-8 text-sm dark:bg-php-gray-dark">

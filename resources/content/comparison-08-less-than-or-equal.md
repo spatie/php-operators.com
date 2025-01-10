@@ -3,7 +3,7 @@ title: $a <= $b
 teaser: "Less than or equal"
 category: comparison
 tags: ["<=", less, than, equal]
-related: ["<", ">="]
+related: ["less-than", "greater-than", "greater-than-or-equal"]
 ---
 
 ```php

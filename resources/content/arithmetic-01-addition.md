@@ -3,7 +3,7 @@ title: "$a + $b"
 teaser: "Addition"
 category: arithmetic
 tags: [+, add, sum]
-related: [+=, -]
+related: ["positive-number-conversion", "addition-assignment", "increment-and-return", "return-and-increment", "subtraction"]
 ---
 
 Add two numbers together.

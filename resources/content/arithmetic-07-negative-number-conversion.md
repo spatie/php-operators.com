@@ -1,9 +1,10 @@
 ---
 title: -$a
+
 teaser: "Negative Number Conversion"
 category: arithmetic
 tags: [-$a, convert, invert]
-related: [+$a]
+related: ["subtraction", "positive-number-conversion"]
 ---
 
 When using the `-` operator in front of a variable, that variable will be cast to a number and it's sign will be inverted.

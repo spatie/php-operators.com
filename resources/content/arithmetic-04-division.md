@@ -3,7 +3,7 @@ title: $a / $b
 teaser: "Division"
 category: arithmetic
 tags: [/, divide]
-related: [/=, "*"]
+related: ["division-assignment", "multiplication"]
 ---
 
 Divide two numbers

@@ -3,7 +3,7 @@ title: "!$a"
 teaser: "Logical not"
 category: comparison
 tags: ["!", comparison, logical, not]
-related: ["&&", "||"]
+related: ["logical-and", "logical-or"]
 ---
 
 ```php

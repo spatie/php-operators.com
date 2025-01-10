@@ -3,10 +3,10 @@ title: $a ** $b
 teaser: "Exponentiation"
 category: arithmetic
 tags: ["**", exponent, power]
-related: ["*"]
+related: ["multiplication"]
 ---
 
-Raise `$a` the the `$b`th power
+Raise `$a` to the `$b`<sup>th</sup> power
 
 ```php
 $a = 2 ** 2; // 4

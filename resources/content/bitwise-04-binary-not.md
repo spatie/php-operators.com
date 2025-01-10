@@ -3,7 +3,7 @@ title: ~$a
 teaser: "Binary not"
 category: bitwise
 tags: ["~"]
-related: ["&", "|", "^"]
+related: ["binary-and", "binary-or", "binary-xor"]
 ---
 
 Binary not: also switches the sign

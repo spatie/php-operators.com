@@ -3,7 +3,7 @@ title: $a /= $b
 teaser: "Division assignment"
 category: arithmetic
 tags: [/=, divide, shorthand]
-related: ["/"]
+related: ["division", "multiplication-assignment", "modulo-assignment"]
 ---
 
 Shorthand for `$a = $a / $b`

@@ -3,6 +3,6 @@ title: $a >>= $b
 teaser: "Bitshift right assignment"
 category: bitwise
 tags: [">>="]
-related: [">>", "<<="]
+related: ["bitshift-right", "bitshift-left-assignment"]
 ---
 

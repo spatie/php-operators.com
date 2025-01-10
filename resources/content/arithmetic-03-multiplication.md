@@ -3,7 +3,7 @@ title: $a * $b
 teaser: "Multiplication"
 category: arithmetic
 tags: ["*", multiply]
-related: ["*=", /]
+related: ["multiplication-assignment", "division"]
 ---
 
 Multiply two numbers

@@ -3,7 +3,7 @@ title: --$a
 teaser: "Decrement and return"
 category: arithmetic
 tags: [--$a, decrement]
-related: [$a--, ++$a]
+related: ["return-and-decrement", "increment-and-return"]
 ---
 
 Decrement `$a` by one, then return it.

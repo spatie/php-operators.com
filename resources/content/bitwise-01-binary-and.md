@@ -3,7 +3,7 @@ title: $a & $b
 teaser: "Binary and"
 category: bitwise
 tags: ["&"]
-related: ["&="]
+related: ["binary-and-assignment", "binary-or", "binary-xor", "binary-not"]
 ---
 
 Binary and

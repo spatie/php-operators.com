@@ -3,7 +3,7 @@ title: $a *= $b
 teaser: "Multiplication assignment"
 category: arithmetic
 tags: ["*=", multiply, multiplication, assignment, shorthand]
-related: ["*"]
+related: ["multiplication", "division-assignment"]
 ---
 
 Shorthand for `$a = $a * $b`

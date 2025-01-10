@@ -3,7 +3,7 @@ title: $a ^ $b
 teaser: "Binary xor"
 category: bitwise
 tags: ["^"]
-related: ["^="]
+related: ["binary-xor-assignment", "binary-and", "binary-or", "binary-not"]
 ---
 
 Binary xor

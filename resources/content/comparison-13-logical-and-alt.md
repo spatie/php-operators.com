@@ -3,7 +3,7 @@ title: $a and $b
 teaser: "Alternative logical and"
 category: comparison
 tags: ["and", comparison, logical, "&&"]
-related: ["&&", "or", "xor"]
+related: ["logical-and", "logical-or", "logical-not"]
 ---
 
 ```php

@@ -3,7 +3,7 @@ title: +$a
 teaser: "Positive Number Conversion"
 category: arithmetic
 tags: [+$a, convert]
-related: [-$a]
+related: ["addition", "negative-number-conversion"]
 ---
 
 When using the `+` operator in front of a variable, that variable will be cast to a number.

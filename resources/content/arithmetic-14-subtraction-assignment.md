@@ -3,7 +3,7 @@ title: $a -= $b
 teaser: "Subtraction assignment"
 category: arithmetic
 tags: [-=, subtraction, assignment, shorthand]
-related: [-]
+related: ["subtraction", "addition-assignment"]
 ---
 
 Shorthand for `$a = $a - $b`

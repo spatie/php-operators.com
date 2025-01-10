@@ -3,7 +3,7 @@ title: $a .= $b
 teaser: "Concatenation assignment"
 category: strings
 tags: [".="]
-related: ["."]
+related: ["concatenation"]
 ---
 
 Shorthand for $a = $a . $b

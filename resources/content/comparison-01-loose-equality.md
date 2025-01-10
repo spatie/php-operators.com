@@ -3,7 +3,7 @@ title: $a == $b
 teaser: "Loose equality"
 category: comparison
 tags: [==, equality, loose]
-related: [===]
+related: ["strict-equality", "loose-inequality"]
 ---
 
 Check equality with type juggling

@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use Exception;
 use Livewire\Component;
 use Spatie\Sheets\Facades\Sheets;
 use Spatie\Sheets\Sheet;
@@ -40,9 +41,16 @@ class Operators extends Component
             });
         }
 
+        $currentOperator = $this->currentOperatorSlug
+            ? $operators->first(fn (Sheet $sheet) => $sheet->slug === $this->currentOperatorSlug)
+            : null;
+
         return view('livewire.operators', [
-            'currentOperator' => $this->currentOperatorSlug
-                ? $operators->first(fn (Sheet $sheet) => $sheet->slug === $this->currentOperatorSlug)
+            'currentOperator' => $currentOperator,
+            'relatedOperators' => $currentOperator
+                ? collect($currentOperator->related)->map(function (string $related) use ($operators) {
+                    return $operators->firstWhere('slug', $related) ?? throw new Exception("Operator {$related} does not exist.");
+                })
                 : null,
             'operatorsByCategory' => $operators->groupBy('category'),
         ]);

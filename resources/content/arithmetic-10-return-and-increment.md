@@ -3,7 +3,7 @@ title: $a++
 teaser: "Return and increment"
 category: arithmetic
 tags: [$a++, increment]
-related: [++$a, $a--]
+related: ["increment-and-return", "return-and-decrement"]
 ---
 
 Return `$a`, then increment by one.
