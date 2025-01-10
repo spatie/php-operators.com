@@ -3,7 +3,7 @@
     <header
         class="flex text-sm py-8 px-8 border-php-violet/50 border-b bg-php-violet-light dark:bg-php-gray-dark z-10 transition-all dark:border-php-gray md:border-b-0 md:py-0 md:h-24 md:fixed md:w-full md:top-0"
         :class="{ 'header-collapse': navAtTop }"
-        x-data="{ navAtTop: (window.pageYOffset < 96) ? false: true }"
+        x-data="{ navAtTop: false }"
         @scroll.window="navAtTop = (window.pageYOffset < 96) ? false: true"
     >
         <div class="container flex flex-col items-center gap-6 max-w-4xl mx-auto md:flex-row md:gap-10">
