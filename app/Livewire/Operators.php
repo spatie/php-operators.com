@@ -32,27 +32,27 @@ class Operators extends Component
 
     public function render()
     {
-        $operators = Sheets::all();
+        $allOperators = Sheets::all();
 
-        if ($this->search) {
-            $operators = $operators->filter(function (Sheet $operator) {
+        $visibleOperators = $this->search
+            ? $allOperators->filter(function (Sheet $operator) {
                 return collect([$operator->slug, ...$operator->tags])
                     ->first(fn (string $term) => strpos($term, $this->search) !== false);
-            });
-        }
+            })
+            : $allOperators;
 
         $currentOperator = $this->currentOperatorSlug
-            ? $operators->first(fn (Sheet $sheet) => $sheet->slug === $this->currentOperatorSlug)
+            ? $allOperators->first(fn (Sheet $sheet) => $sheet->slug === $this->currentOperatorSlug)
             : null;
 
         return view('livewire.operators', [
             'currentOperator' => $currentOperator,
             'relatedOperators' => $currentOperator
-                ? collect($currentOperator->related)->map(function (string $related) use ($operators) {
-                    return $operators->firstWhere('slug', $related) ?? throw new Exception("Operator with slug `{$related}` does not exist.");
+                ? collect($currentOperator->related)->map(function (string $related) use ($allOperators) {
+                    return $allOperators->firstWhere('slug', $related) ?? throw new Exception("Operator with slug `{$related}` does not exist.");
                 })
                 : null,
-            'operatorsByCategory' => $operators->groupBy('category'),
+            'operatorsByCategory' => $visibleOperators->groupBy('category'),
         ]);
     }
 }
