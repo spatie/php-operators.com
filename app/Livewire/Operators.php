@@ -49,7 +49,7 @@ class Operators extends Component
             'currentOperator' => $currentOperator,
             'relatedOperators' => $currentOperator
                 ? collect($currentOperator->related)->map(function (string $related) use ($operators) {
-                    return $operators->firstWhere('slug', $related) ?? throw new Exception("Operator {$related} does not exist.");
+                    return $operators->firstWhere('slug', $related) ?? throw new Exception("Operator with slug `{$related}` does not exist.");
                 })
                 : null,
             'operatorsByCategory' => $operators->groupBy('category'),
