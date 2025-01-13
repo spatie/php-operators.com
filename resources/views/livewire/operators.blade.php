@@ -38,7 +38,8 @@
 
     <main class="main">
         @foreach($operatorsByCategory as $category => $operators)
-            <section class="max-w-4xl mx-auto px-12 my-12 first:mt-36">
+            <section class="max-w-5xl mx-auto my-12 first:mt-12 md:first:mt-36">
+                <div class="px-12">
                 <h2 class="lowercase mb-4 text-sm">{{ $category }}</h2>
                 <nav>
                     <ul class="flex flex-wrap gap-2">
@@ -52,45 +53,48 @@
                         @endforeach
                     </ul>
                 </nav>
+                </div>
                 @if($currentOperator?->category === $category)
                     <article class="my-8 last:mb-0">
-                        <div class="description relative bg-php-purple-bleak text-white py-4 md:py-12 dark:bg-php-gray">
-                            <div class="grid gap-4 md:grid-cols-2">
+                        <div class="description relative bg-php-purple-bleak text-white px-12 py-6 md:py-12 dark:bg-php-gray">
+                            <div class="grid gap-8 md:grid-cols-2">
                                 <div class="text-sm flex flex-col">
                                     <div class="flex items-center gap-6 mb-6">
-                                        <p class="px-3 py-2 bg-php-purple text-white rounded-md font-semibold">
+                                        <p class="px-3 py-2 bg-php-purple text-white rounded-md font-semibold whitespace-nowrap">
                                             {{ $currentOperator->title }}</p>
                                         <p>{{ $currentOperator->teaser }}</p>
                                     </div>
-                                    <div class="mb-4">
-                                        <p>{{ $currentOperator->contents }}</p>
+                                    <div class="operator-content mb-4">
+                                        {{ $currentOperator->contents }}
                                     </div>
                                     <div class="mt-auto flex gap-2 text-xs mb-3">
-                                        <span class="opacity-50">tags</span>
+                                        <span class="opacity-50 lowercase">Tags</span>
                                         @foreach($currentOperator->tags as $tag)
                                             <button
                                                 type="button"
-                                                class="text-php-purple-light hover:text-white hover:underline dark:text-php-purple dark:hover:text-php-purple-light"
+                                                class="text-php-purple-light hover:text-white hover:underline dark:text-php-purple dark:hover:text-php-purple-light selection:text-php-gray-dark"
                                                 x-on:click="search = '{{ $tag }}'"
                                             >
                                                 {{ $tag }}
                                             </button>
                                         @endforeach
                                     </div>
-                                    <div class="flex items-center gap-3 text-xs">
-                                        <span class="opacity-50">related</span>
-                                        @foreach($relatedOperators as $relatedOperator)
-                                            <x-operator
-                                                :operator="$relatedOperator"
-                                                class="bg-php-violet-dark/50 hover:bg-php-violet-dark dark:bg-php-gray-light dark:hover:bg-php-gray-light/50"
-                                            />
-                                        @endforeach
+                                    <div class="grid gap-3 grid-cols-[auto_1fr] text-xs">
+                                        <span class="flex items-center h-8 opacity-50 lowercase">Related</span>
+                                        <div class="flex flex-wrap gap-3">
+                                            @foreach($relatedOperators as $relatedOperator)
+                                                <x-operator
+                                                    :operator="$relatedOperator"
+                                                    class="bg-php-violet-dark/50 hover:bg-php-violet-dark dark:bg-php-gray-light dark:hover:bg-php-gray-light/50"
+                                                />
+                                            @endforeach
+                                        </div>
                                     </div>
                                 </div>
                                 <div
                                     class="relative bg-php-violet-dark rounded-md p-8 text-sm dark:bg-php-gray-dark">
                                     <pre class="overflow-x-auto"><code>{{ $currentOperator->code }}</code></pre>
-                                    <div class="absolute flex top-0 right-0 py-3 px-3 text-xs">
+                                    <div class="absolute flex top-0 right-0 py-3 px-3 text-xs opacity-35">
                                         <span><svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
                                                 viewBox="0 0 22 13">
                                                 <path fill="currentColor"
@@ -105,7 +109,7 @@
             </section>
         @endforeach
     </main>
-    <footer class="w-full text-xs p-8 md:fixed md:bottom-0 pointer-events-none">
+    <footer class="w-full text-xs px-12 py-8 xl:fixed md:bottom-0 pointer-events-none">
         <div class="flex justify-between items-center gap-6">
             <div class="flex items-center gap-3 lowercase pointer-events-auto">Made by
                 <a class="hover:opacity-90 active:translate-y-px" href="https://spatie.be/" target="_blank"><img

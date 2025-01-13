@@ -41,29 +41,25 @@
 }
 
 @layer components {
+
     .header-collapse {
         @apply border-b h-20 !important;
     }
 
-    .description:before {
-        @apply -left-4 w-4 bg-php-purple-bleak rounded-l-lg md:-left-12 md:w-12 dark:bg-php-gray;
-        content: '';
-        position: absolute;
-        top: 0;
-        height: 100%;
-    }
-    .description:after {
-        @apply -right-4 w-4 bg-php-purple-bleak rounded-r-lg md:-right-12 md:w-12 dark:bg-php-gray;
-        content: '';
-        position: absolute;
-        top: 0;
-        height: 100%;
+    .operator-content > p {
+        @apply mb-3;
     }
 
     @media screen(md) {
         .main {
             min-height: calc(100svh - theme('spacing.24'));
             margin-top: theme('spacing.24');
+        }
+    }
+
+    @media screen and (min-width: 1025px) {
+        .description {
+            @apply rounded-lg;
         }
     }
 }

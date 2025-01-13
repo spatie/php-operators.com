@@ -25,8 +25,8 @@ export default class ThemeSwitcher {
     }
 
     toggleActiveButton(activeButton, inactiveButton) {
-        activeButton.classList.remove('opacity-50');
-        inactiveButton.classList.add('opacity-50');
+        activeButton.classList.remove('opacity-20');
+        inactiveButton.classList.add('opacity-20');
     }
 
     toggleMode() {
