@@ -2,11 +2,16 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
+        <meta name="description" content="Learn more about each of the PHP operators. Click on an operator to read how it works and see code examples, or enter a search term to filter the list.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#E6E6F2" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#202023" media="(prefers-color-scheme: dark)" />
 
         <title>PHP Operators</title>
+
+        <meta property="og:title" content="PHP Operators" />
+        <meta property="og:description" content="Learn more about each of the PHP operators. Click on an operator to read how it works and see code examples, or enter a search term to filter the list." />
+        <meta property="og:author" content="Spatie" />
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @livewireStyles
