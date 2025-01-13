@@ -93,7 +93,7 @@
                                 </div>
                                 <div
                                     class="relative bg-php-violet-dark rounded-md p-8 text-sm dark:bg-php-gray-dark">
-                                    <pre class="overflow-x-auto"><code>{{ $currentOperator->code }}</code></pre>
+                                    <pre class="overflow-x-auto whitespace-pre-line md:whitespace-pre"><code>{{ $currentOperator->code }}</code></pre>
                                     <div class="absolute flex top-0 right-0 py-3 px-3 text-xs opacity-35">
                                         <span><svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
                                                 viewBox="0 0 22 13">
