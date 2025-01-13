@@ -19,10 +19,10 @@ $b = 10;
 
 /*
  * Binary representation: 0110 because
- * - 1 xor 1 = 0
- * - 1 xor 0 = 1
- * - 0 xor 1 = 1
- * - 0 xor 0 = 0
+ * - 1 XOR 1 = 0
+ * - 1 XOR 0 = 1
+ * - 0 XOR 1 = 1
+ * - 0 XOR 0 = 0
  */
 $a ^= $b;
 ```
