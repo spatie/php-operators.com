@@ -9,5 +9,5 @@ related: ["multiplication"]
 Raise `$a` to the `$b`<sup>th</sup> power
 
 ```php
-$a = 2 ** 2; // 4
+$a = 2 ** 8; // 256
 ```
