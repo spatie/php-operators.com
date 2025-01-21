@@ -6,6 +6,7 @@ use Exception;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
+use Livewire\Attributes\Url;
 use Livewire\Component;
 use Spatie\Sheets\Facades\Sheets;
 use Spatie\Sheets\Sheet;
@@ -14,6 +15,7 @@ class Operators extends Component
 {
     public ?string $currentOperatorSlug;
 
+    #[Url]
     public string $search = '';
 
     public function setSearch(string $search): void
@@ -40,7 +42,7 @@ class Operators extends Component
         $visibleOperators = $this->search
             ? $allOperators->filter(function (Sheet $operator) {
                 return collect([$operator->slug, ...$operator->tags])
-                    ->first(fn (string $term) => strpos($term, $this->search) !== false);
+                    ->first(fn (string $term) => str_contains($term, $this->search));
             })
             : $allOperators;
 

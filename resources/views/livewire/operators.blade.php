@@ -1,6 +1,5 @@
 <div x-data="{
     currentOperatorSlug: $wire.entangle('currentOperatorSlug'),
-    search: $wire.entangle('search').live
 }" x-init="() => {
     document.addEventListener('livewire:navigated', () => {
         $nextTick(() => {
@@ -22,9 +21,11 @@
             </a>
             <div class="relative h-12 w-full">
                 <input
-                    x-model="search"
+                    wire:model.live="search"
                     class="bg-php-violet rounded-full px-6 w-full h-full focus:ring-2 ring-inset ring-php-purple/15 outline-none placeholder:text-php-purple-dark/50 dark:bg-php-gray-light dark:placeholder:text-white/50 dark:ring-php-purple/50"
-                    type="text" placeholder="Find out more about a PHP operator" />
+                    type="text"
+                    placeholder="Find out more about a PHP operator"
+                />
                 @if($search)
                     <button
                         class="absolute top-0 right-0 px-6 h-full flex items-center text-lg text-php-purple-dark hover:text-php-purple active:translate-y-px dark:text-white dark:hover:text-white/50"
@@ -82,7 +83,7 @@
                                             <button
                                                 type="button"
                                                 class="text-php-purple-light hover:text-white hover:underline dark:text-php-purple dark:hover:text-php-purple-light selection:text-php-gray-dark"
-                                                x-on:click="search = '{{ $tag }}'"
+                                                wire:click="setSearch('{{ $tag }}')"
                                             >
                                                 {{ $tag }}
                                             </button>
