@@ -65,7 +65,7 @@ class Operators extends Component
         return Cache::flexible(
             key: 'operators',
             ttl: [now()->addHour(), now()->addDay()],
-            callback: fn() => Sheets::all(),
+            callback: fn () => Sheets::all(),
         );
     }
 }
