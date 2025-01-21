@@ -26,6 +26,8 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @livewireStyles
+
+        <script src="https://kit.fontawesome.com/179125d0a6.js" crossorigin="anonymous"></script>
     </head>
     <body x-bind:class="theme" class="font-mono antialiased bg-php-violet-light text-php-gray-dark dark:bg-php-gray-dark dark:text-white selection:bg-php-purple-light">
         {{ $slot }}
