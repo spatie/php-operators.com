@@ -36,7 +36,7 @@ class OperatorsContentParser extends MarkdownWithFrontMatterParser
             throw new Exception('Invalid contents. Contents must contain a description and end with a code snippet. Contents: '.$contents);
         }
 
-        $highlightedCode = resolve(Highlighter::class)->parse(strip_tags($codeContents), 'php');
+        $highlightedCode = resolve(Highlighter::class)->parse(strip_tags(html_entity_decode($codeContents)), 'php');
 
         return [
             ...$parsed,
