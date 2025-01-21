@@ -16,7 +16,7 @@ class OperatorsContentParser extends MarkdownWithFrontMatterParser
         $contents = $parsed['contents'] ?? '';
 
         if (substr_count($contents, '<pre>') > 1) {
-            throw new Exception('Invalid contents. Contents may only contain one code snippet. Contents: ' . $contents);
+            throw new Exception('Invalid contents. Contents may only contain one code snippet. Contents: '.$contents);
         }
 
         $codePosition = strpos($contents, '<pre>');
@@ -32,9 +32,9 @@ class OperatorsContentParser extends MarkdownWithFrontMatterParser
         $descriptionContents = substr($contents, 0, $codePosition);
         $codeContents = substr($contents, $codePosition);
 
-         if (trim($codeContents) && ! str_ends_with(trim($codeContents), '</pre>')) {
-             throw new Exception('Invalid contents. Contents must contain a description and end with a code snippet. Contents: ' . $contents);
-         }
+        if (trim($codeContents) && ! str_ends_with(trim($codeContents), '</pre>')) {
+            throw new Exception('Invalid contents. Contents must contain a description and end with a code snippet. Contents: '.$contents);
+        }
 
         $highlightedCode = resolve(Highlighter::class)->parse(strip_tags($codeContents), 'php');
 

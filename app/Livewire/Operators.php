@@ -22,7 +22,7 @@ class Operators extends Component
     {
         $randomOperator = Sheets::all()->random();
 
-        $this->redirect('/operators/' . $randomOperator->slug, navigate: true);
+        $this->redirect('/operators/'.$randomOperator->slug, navigate: true);
     }
 
     public function mount($operator = null): void
