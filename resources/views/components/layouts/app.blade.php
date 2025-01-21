@@ -5,11 +5,10 @@
         theme: $persist(''),
     }"
     x-init="() => {
-        const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (theme) return;
 
-        if (! theme) {
-            theme = prefersDarkMode ? 'dark' : 'light';
-        }
+        const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        theme = prefersDarkMode ? 'dark' : 'light';
     }"
 >
     <head>
