@@ -15,7 +15,7 @@ $slugs = array_filter(array_map(function (string $filename) {
     $parts = explode('-', str_replace('.md', '', $filename), 3);
 
     return $parts[2] ?? null;
-}, scandir(__DIR__.'/../../resources/content')));
+}, scandir(__DIR__ . '/../resources/content')));
 
 it('renders all operators', function (string $slug) {
     $this->get('/operators/' . $slug)
