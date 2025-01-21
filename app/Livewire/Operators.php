@@ -56,6 +56,9 @@ class Operators extends Component
                 })
                 : null,
             'operatorsByCategory' => $visibleOperators->groupBy('category'),
+        ])->layoutData([
+            'title' => str($currentOperator?->teaser ?? '')->stripTags(),
+            'description' => str($currentOperator?->contents ?? '')->stripTags()->trim(),
         ]);
     }
 
