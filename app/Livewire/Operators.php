@@ -3,6 +3,9 @@
 namespace App\Livewire;
 
 use Exception;
+use Illuminate\Contracts\View\View;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Cache;
 use Livewire\Component;
 use Spatie\Sheets\Facades\Sheets;
 use Spatie\Sheets\Sheet;
@@ -20,7 +23,7 @@ class Operators extends Component
 
     public function random(): void
     {
-        $randomOperator = Sheets::all()->random();
+        $randomOperator = $this->getSheets()->random();
 
         $this->redirect('/operators/'.$randomOperator->slug, navigate: true);
     }
@@ -30,9 +33,9 @@ class Operators extends Component
         $this->currentOperatorSlug = $operator;
     }
 
-    public function render()
+    public function render(): View
     {
-        $allOperators = Sheets::all();
+        $allOperators = $this->getSheets();
 
         $visibleOperators = $this->search
             ? $allOperators->filter(function (Sheet $operator) {
@@ -54,5 +57,15 @@ class Operators extends Component
                 : null,
             'operatorsByCategory' => $visibleOperators->groupBy('category'),
         ]);
+    }
+
+    /** @return \Illuminate\Support\Collection<Sheet> */
+    private function getSheets(): Collection
+    {
+        return Cache::flexible(
+            key: 'operators',
+            ttl: [now()->addHour(), now()->addDay()],
+            callback: fn () => Sheets::all(),
+        );
     }
 }
