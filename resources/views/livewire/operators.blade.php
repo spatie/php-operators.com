@@ -1,4 +1,13 @@
-<div x-data="{ search: $wire.entangle('search').live }">
+<div x-data="{
+    currentOperatorSlug: $wire.entangle('currentOperatorSlug'),
+    search: $wire.entangle('search').live
+}" x-init="() => {
+    document.addEventListener('livewire:navigated', () => {
+        $nextTick(() => {
+            document.getElementById(currentOperatorSlug).scrollIntoView();
+        });
+    }, {once: true})
+}">
     @persist('header')
     <header
         class="flex text-sm py-8 px-8 border-php-violet/50 border-b bg-php-violet-light dark:bg-php-gray-dark z-10 transition-all dark:border-php-gray md:border-b-0 md:py-0 md:h-24 md:fixed md:w-full md:top-0"
@@ -55,7 +64,7 @@
                 </nav>
                 </div>
                 @if($currentOperator?->category === $category)
-                    <article class="my-8 last:mb-0">
+                    <article id="{{ $currentOperator->slug }}" class="my-8 last:mb-0">
                         <div class="description relative bg-php-purple-bleak text-white px-12 py-6 md:py-12 dark:bg-php-gray">
                             <div class="grid gap-8 md:grid-cols-2">
                                 <div class="text-sm flex flex-col">
