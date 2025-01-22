@@ -18,9 +18,9 @@
         <meta name="theme-color" content="#E6E6F2" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#202023" media="(prefers-color-scheme: dark)" />
 
-        <title>{{ isset($title) && $title ? $title.' | ' : '' }}PHP Operators</title>
+        <title>{{ isset($title) && (string) $title ? $title.' | ' : '' }}PHP Operators</title>
 
-        <meta property="og:title" content="{{ isset($title) && $title ? $title.' | ' : '' }}PHP Operators" />
+        <meta property="og:title" content="{{ isset($title) && (string) $title ? $title.' | ' : '' }}PHP Operators" />
         <meta property="og:description" content="{{ $description ?? 'Learn more about each of the PHP operators. Click on an operator to read how it works and see code examples, or enter a search term to filter the list.' }}" />
         <meta property="og:author" content="Spatie" />
 
