@@ -13,7 +13,11 @@
             <rect x="64" y="64" width="312.897" height="119.897" rx="15.7241" fill="#6F75CF"/>
             <text class="font-mono text-center" fill="white" xml:space="preserve" style="white-space: pre" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="220" y="126" dominant-baseline="middle" text-anchor="middle">{{ $title }}</tspan></text>
 
-            <text class="font-mono" fill="white" xml:space="preserve" style="white-space: pre" font-size="52" letter-spacing="0em"><tspan x="448.897" y="126" dominant-baseline="middle">{{ $teaser }}</tspan></text>
+            <foreignObject x="448.897" y="64" width="700" height="120">
+                <p class="font-mono text-white" style="font-size: 52px; letter-spacing: 0; height: 120px; line-height: 1; display: flex; flex-direction: column; justify-content: center;">
+                    {!! \Illuminate\Support\Str::limit($teaser, 35) !!}
+                </p>
+            </foreignObject>
             <foreignObject x="64" y="230" width="1072" height="185">
                 <div class="font-mono text-white" style="font-size: 42px; letter-spacing: 0; height: 185px; display: flex; flex-direction: column; justify-content: center;">
                     {!! \Illuminate\Support\Str::limit($contents, 120, preserveWords: true) !!}

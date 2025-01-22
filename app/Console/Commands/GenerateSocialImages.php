@@ -9,8 +9,7 @@ use Spatie\Sheets\Facades\Sheets;
 
 class GenerateSocialImages extends Command
 {
-    protected $signature = 'app:generate-social-images {--force}';
-
+    protected $signature = 'app:generate-social-images {slug?} {--force}';
     protected $description = 'Generates all social images';
 
     /**
@@ -21,6 +20,10 @@ class GenerateSocialImages extends Command
         File::ensureDirectoryExists(public_path('og'));
 
         $operators = Sheets::all();
+
+        if ($this->argument('slug')) {
+            $operators = $operators->where('slug', $this->argument('slug'));
+        }
 
         $this->getOutput()->progressStart($operators->count());
 
