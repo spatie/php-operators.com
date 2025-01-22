@@ -9,6 +9,7 @@
         "php": "^8.2",
         "gehrisandro/tailwind-merge-laravel": "^1.2",
         "laravel/framework": "^11.31",
+        "laravel/octane": "^2.6",
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.5",
         "spatie/sheets": "^1.12",
