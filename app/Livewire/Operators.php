@@ -2,7 +2,6 @@
 
 namespace App\Livewire;
 
-use App\Http\Controllers\OgImageController;
 use Exception;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Collection;
