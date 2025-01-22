@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Http\Controllers\OgImageController;
 use Exception;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Collection;
@@ -61,6 +62,7 @@ class Operators extends Component
         ])->layoutData([
             'title' => str($currentOperator?->teaser ?? '')->stripTags(),
             'description' => str($currentOperator?->contents ?? '')->stripTags()->trim(),
+            'image' => $currentOperator ? url("/og/{$currentOperator->slug}.png") : null,
         ]);
     }
 
