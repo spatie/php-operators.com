@@ -10,6 +10,7 @@ use Spatie\Sheets\Facades\Sheets;
 class GenerateSocialImages extends Command
 {
     protected $signature = 'app:generate-social-images {slug?} {--force}';
+
     protected $description = 'Generates all social images';
 
     /**
