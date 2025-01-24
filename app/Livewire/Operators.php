@@ -58,11 +58,11 @@ class Operators extends Component
                 })
                 : null,
             'operatorsByCategory' => $visibleOperators->groupBy('category'),
-            'allOperators' => $allOperators,
         ])->layoutData([
             'title' => str($currentOperator?->teaser ?? '')->stripTags(),
             'description' => str($currentOperator?->contents ?? '')->stripTags()->trim(),
             'image' => $currentOperator ? url("/og/{$currentOperator->slug}.png") : null,
+            'allOperators' => $allOperators,
         ]);
     }
 
