@@ -72,5 +72,6 @@
         @endpersist
 
         @livewireScripts
+        @stack('scripts')
     </body>
 </html>
