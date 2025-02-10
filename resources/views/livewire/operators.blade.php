@@ -50,19 +50,19 @@
         @foreach($operatorsByCategory as $category => $operators)
             <section class="max-w-5xl mx-auto my-12 first:mt-12 md:first:mt-36 scroll-mt-28" data-operator-section>
                 <div class="px-12">
-                <h2 class="lowercase mb-4 text-sm">{{ $category }}</h2>
-                <nav>
-                    <ul class="flex flex-wrap gap-2">
-                        @foreach($operators as $operator)
-                            <li>
-                                <x-operator
-                                    :operator="$operator"
-                                    :class="$currentOperator?->slug === $operator->slug ? 'bg-php-purple text-white' : 'bg-php-violet hover:bg-white dark:bg-php-gray dark:hover:bg-php-gray-light'"
-                                />
-                            </li>
-                        @endforeach
-                    </ul>
-                </nav>
+                    <h2 class="lowercase mb-4 text-sm">{{ $category }}</h2>
+                    <nav>
+                        <ul class="flex flex-wrap gap-2">
+                            @foreach($operators as $operator)
+                                <li>
+                                    <x-operator
+                                        :operator="$operator"
+                                        :class="$currentOperator?->slug === $operator->slug ? 'bg-php-purple text-white' : 'bg-php-violet hover:bg-white dark:bg-php-gray dark:hover:bg-php-gray-light'"
+                                    />
+                                </li>
+                            @endforeach
+                        </ul>
+                    </nav>
                 </div>
                 @if($currentOperator?->category === $category)
                     <article id="{{ $currentOperator->slug }}" class="my-8 last:mb-0">
