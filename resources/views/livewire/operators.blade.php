@@ -8,42 +8,42 @@
     }, {once: true})
 }">
     @persist('header')
-    <header
-        class="flex text-sm py-8 px-8 border-php-violet/50 border-b bg-php-violet-light dark:bg-php-gray-dark z-10 transition-all dark:border-php-gray md:border-b-0 md:py-0 md:h-24 md:fixed md:w-full md:top-0"
-        :class="{ 'header-collapse': navAtTop }"
-        x-data="{ navAtTop: false }"
-        @scroll.window="navAtTop = (window.pageYOffset < 96) ? false: true"
-    >
-        <div class="container flex flex-col items-center gap-6 max-w-4xl mx-auto md:flex-row md:gap-10">
-            <a href="/" class="w-full max-w-44 md:max-w-56 active:translate-y-px">
-                <x-logo></x-logo>
-                <h1 class="sr-only">PHP Operators</h1>
-            </a>
-            <div class="relative h-12 w-full">
-                <input
-                    wire:model.live="search"
-                    class="bg-php-violet rounded-full px-6 w-full h-full focus:ring-2 ring-inset ring-php-purple/15 outline-none placeholder:text-php-purple-dark/50 dark:bg-php-gray-light dark:placeholder:text-white/50 dark:ring-php-purple/50"
-                    type="text"
-                    placeholder="Find out more about a PHP operator"
-                />
-                @if($search)
-                    <button
-                        class="absolute top-0 right-0 px-6 h-full flex items-center text-lg text-php-purple-dark hover:text-php-purple active:translate-y-px dark:text-white dark:hover:text-white/50"
-                        wire:click="setSearch('')"
-                    >
-                        <span class="pointer-events-none fa-duotone fa-xmark-large"></span>
-                    </button>
-                @else
-                    <button
-                        class="absolute top-0 right-0 px-6 h-full flex items-center text-lg text-php-purple-dark hover:text-php-purple active:translate-y-px dark:text-white dark:hover:text-white/50"
-                        wire:click="random"
-                    >
-                        <span class="pointer-events-none fa-duotone fa-shuffle"></span>
-                    </button>
-                @endif
+        <header
+            class="flex text-sm py-8 px-8 border-php-violet/50 border-b bg-php-violet-light dark:bg-php-gray-dark z-10 transition-all dark:border-php-gray md:border-b-0 md:py-0 md:h-24 md:fixed md:w-full md:top-0"
+            :class="{ 'header-collapse': navAtTop }"
+            x-data="{ navAtTop: false }"
+            @scroll.window="navAtTop = (window.pageYOffset < 96) ? false: true"
+        >
+            <div class="container flex flex-col items-center gap-6 max-w-4xl mx-auto md:flex-row md:gap-10">
+                <a href="/" class="w-full max-w-44 md:max-w-56 active:translate-y-px">
+                    <x-logo></x-logo>
+                    <h1 class="sr-only">PHP Operators</h1>
+                </a>
+                <div class="relative h-12 w-full">
+                    <input
+                        wire:model.live="search"
+                        class="bg-php-violet rounded-full px-6 w-full h-full focus:ring-2 ring-inset ring-php-purple/15 outline-none placeholder:text-php-purple-dark/50 dark:bg-php-gray-light dark:placeholder:text-white/50 dark:ring-php-purple/50"
+                        type="text"
+                        placeholder="Find out more about a PHP operator"
+                    />
+                    @if($search)
+                        <button
+                            class="absolute top-0 right-0 px-6 h-full flex items-center text-lg text-php-purple-dark hover:text-php-purple active:translate-y-px dark:text-white dark:hover:text-white/50"
+                            wire:click="setSearch('')"
+                        >
+                            <span class="pointer-events-none fa-duotone fa-xmark-large"></span>
+                        </button>
+                    @else
+                        <button
+                            class="absolute top-0 right-0 px-6 h-full flex items-center text-lg text-php-purple-dark hover:text-php-purple active:translate-y-px dark:text-white dark:hover:text-white/50"
+                            wire:click="random"
+                        >
+                            <span class="pointer-events-none fa-duotone fa-shuffle"></span>
+                        </button>
+                    @endif
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
     @endpersist
 
     <main class="main">
