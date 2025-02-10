@@ -3,7 +3,7 @@
 }" x-init="() => {
     document.addEventListener('livewire:navigated', () => {
         $nextTick(() => {
-            document.getElementById(currentOperatorSlug).scrollIntoView();
+            document.getElementById(currentOperatorSlug).closest('[data-operator-section]').scrollIntoView();
         });
     }, {once: true})
 }">
@@ -48,7 +48,7 @@
 
     <main class="main">
         @foreach($operatorsByCategory as $category => $operators)
-            <section class="max-w-5xl mx-auto my-12 first:mt-12 md:first:mt-36">
+            <section class="max-w-5xl mx-auto my-12 first:mt-12 md:first:mt-36 scroll-mt-28" data-operator-section>
                 <div class="px-12">
                 <h2 class="lowercase mb-4 text-sm">{{ $category }}</h2>
                 <nav>
