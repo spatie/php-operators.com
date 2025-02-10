@@ -5,7 +5,7 @@
         $nextTick(() => {
             document.getElementById(currentOperatorSlug).closest('[data-operator-section]').scrollIntoView();
         });
-    }, {once: true})
+    }, { once: true })
 }">
     @persist('header')
         <header
