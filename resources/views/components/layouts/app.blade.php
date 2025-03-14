@@ -77,13 +77,13 @@
               "@context": "https://schema.org",
               "@type": "FAQPage",
               "mainEntity": [
-                @foreach ($allOperators as $index => $operator)
+                @foreach ($operators as $index => $operator)
                 {
                   "@type": "Question",
-                  "name": "How does PHP {{ $operator->teaser }} work?",
+                  "name": "How does PHP {{ $operator['teaser'] }} work?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "<main>{!! $operator->contents !!}</main><pre><code>{!! html_entity_decode(strip_tags($operator->code)) !!}</code></pre>"
+                    "text": "<main>{!! $operator['contents'] !!}</main><pre><code>{!! html_entity_decode(strip_tags($operator['code'])) !!}</code></pre>"
                   }
                 }{{ $loop->last ? '' : ',' }}
                 @endforeach
