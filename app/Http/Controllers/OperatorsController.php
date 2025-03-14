@@ -28,7 +28,7 @@ class OperatorsController
                         // @todo Fix content exceptions
                         // ?? throw new Exception("Operator with slug `{$related}` does not exist.");
 
-                        if (!$relatedOperator) {
+                        if (! $relatedOperator) {
                             return null;
                         }
 
@@ -37,7 +37,7 @@ class OperatorsController
                             'slug' => $relatedOperator->slug,
                         ];
                     })
-                    ->filter()
+                    ->filter(),
             ]),
             'currentOperatorSlug' => $currentOperatorSlug,
             'title' => str($currentOperator?->teaser ?? '')->stripTags(),
