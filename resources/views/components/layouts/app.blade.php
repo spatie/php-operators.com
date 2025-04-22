@@ -31,14 +31,12 @@
         <meta property="og:author" content="Spatie" />
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @livewireStyles
 
         <script src="https://kit.fontawesome.com/179125d0a6.js" crossorigin="anonymous"></script>
     </head>
     <body x-bind:class="theme" class="font-mono antialiased bg-php-violet-light text-php-gray-dark dark:bg-php-gray-dark dark:text-white selection:bg-php-purple-light">
         {{ $slot }}
 
-        @persist('footer')
         <footer class="w-full text-xs px-12 py-8 xl:fixed md:bottom-0 pointer-events-none">
             <div class="flex justify-between items-center gap-6">
                 <div class="flex items-center gap-3 lowercase pointer-events-auto">Made by
@@ -69,9 +67,7 @@
                 </div>
             </div>
         </footer>
-        @endpersist
 
-        @livewireScripts
         <script type="application/ld+json">
             {
               "@context": "https://schema.org",

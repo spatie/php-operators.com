@@ -32,6 +32,7 @@
                     </button>
                     <button
                         class="absolute top-0 right-0 px-6 h-full flex items-center text-lg text-php-purple-dark hover:text-php-purple active:translate-y-px dark:text-white dark:hover:text-white/50"
+                        x-show="!search"
                         @click="random"
                     >
                         <span class="pointer-events-none fa-duotone fa-shuffle"></span>

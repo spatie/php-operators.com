@@ -2,6 +2,7 @@
 
 namespace App\Data;
 
+use Exception;
 use Illuminate\Support\Collection;
 use Spatie\LaravelData\Data;
 use Spatie\Sheets\Sheet;
@@ -31,10 +32,8 @@ class OperatorData extends Data
             tags: $sheet->tags,
             related: collect($sheet->related)
                 ->map(function (string $related) use ($sheets) {
-                    $relatedOperator = $sheets->firstWhere('slug', $related);
-
-                    // @todo Fix content exceptions
-                    // ?? throw new Exception("Operator with slug `{$related}` does not exist.");
+                    $relatedOperator = $sheets->firstWhere('slug', $related)
+                        ?? throw new Exception("Operator with slug `{$related}` does not exist.");
 
                     if (! $relatedOperator) {
                         return null;
