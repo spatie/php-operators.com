@@ -4,10 +4,10 @@ import persist from '@alpinejs/persist'
 Alpine.data('operators', ({ operators, currentOperatorSlug }) => ({
     operators,
     currentOperatorSlug,
-    operatorsByCategory: [],
+    visibleOperatorsByCategory: [],
     search: '',
     init() {
-        this.operatorsByCategory = Object.groupBy(this.operators, (operator) => operator.category);
+        this.setVisibleOperators();
 
         if (this.currentOperatorSlug) {
             this.$nextTick(this.scrollToCurrent);
@@ -18,13 +18,16 @@ Alpine.data('operators', ({ operators, currentOperatorSlug }) => ({
             window.history.replaceState({}, null, path);
         });
 
-        this.$watch('search', (search) => {
-            const operators = search
-                ? this.operators.filter((operator) => [...operator.tags, operator.title].join(' ').includes(search))
-                : this.operators;
-
-            this.operatorsByCategory = Object.groupBy(operators, (operator) => operator.category);
+        this.$watch('search', () => {
+            this.setVisibleOperators();
         });
+    },
+    setVisibleOperators() {
+        const operators = this.search
+            ? this.operators.filter((operator) => [...operator.tags, operator.title].join(' ').includes(this.search))
+            : this.operators;
+
+        this.visibleOperatorsByCategory = Object.groupBy(operators, (operator) => operator.category);
     },
     selectOperator(slug) {
         if (this.currentOperatorSlug === slug) {

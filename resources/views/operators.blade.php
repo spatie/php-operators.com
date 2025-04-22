@@ -42,7 +42,7 @@
         </header>
 
         <main class="main">
-            <template x-for="[category, operators] in Object.entries(operatorsByCategory)">
+            <template x-for="[category, operators] in Object.entries(visibleOperatorsByCategory)">
                 <section class="max-w-5xl mx-auto my-12 first:mt-12 md:first:mt-36">
                     <div class="px-12">
                         <h2 class="lowercase mb-4 text-sm" x-text="category"></h2>
@@ -53,6 +53,7 @@
                                         <x-operator
                                             class="bg-php-violet dark:bg-php-gray"
                                             x-bind:class="currentOperatorSlug === operator.slug ? '!bg-php-purple text-white' : 'hover:bg-white dark:hover:bg-php-gray-light'"
+                                            @click.prevent="() => selectOperator(operator.slug)"
                                         />
                                     </li>
                                 </template>
@@ -84,7 +85,12 @@
                                             <span class="flex items-center h-8 opacity-50 lowercase">Related</span>
                                             <div class="flex flex-wrap gap-3">
                                                 <template x-for="operator in operator.related">
-                                                    <x-operator class="bg-php-violet-dark/50 hover:bg-php-violet-dark dark:bg-php-gray-light dark:hover:bg-php-gray-light/50"
+                                                    <x-operator
+                                                        class="bg-php-violet-dark/50 hover:bg-php-violet-dark dark:bg-php-gray-light dark:hover:bg-php-gray-light/50"
+                                                        @click.prevent="() => {
+                                                            selectOperator(operator.slug);
+                                                            search = '';
+                                                        }"
                                                     />
                                                 </template>
                                             </div>
