@@ -17,8 +17,7 @@ class OperatorData extends Data
         public string $code,
         public array $tags,
         public array $related,
-    ) {
-    }
+    ) {}
 
     public static function fromSheet(Sheet $sheet, Collection $sheets): static
     {
@@ -37,7 +36,7 @@ class OperatorData extends Data
                     // @todo Fix content exceptions
                     // ?? throw new Exception("Operator with slug `{$related}` does not exist.");
 
-                    if (!$relatedOperator) {
+                    if (! $relatedOperator) {
                         return null;
                     }
 
