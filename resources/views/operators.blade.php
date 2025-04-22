@@ -4,7 +4,7 @@
     :image="$image"
     :operators="$operators"
 >
-    <div x-data="operators">
+    <div x-data="operators({ operators: @js($operators), currentOperatorSlug: @js($currentOperatorSlug) })">
         <header
             class="flex text-sm py-8 px-8 border-php-violet/50 border-b bg-php-violet-light dark:bg-php-gray-dark z-10 transition-all dark:border-php-gray md:border-b-0 md:py-0 md:h-24 md:fixed md:w-full md:top-0"
             :class="{ 'header-collapse': navAtTop }"
@@ -91,7 +91,7 @@
                                     </div>
                                     <div
                                         class="relative bg-php-violet-dark rounded-md p-8 text-sm dark:bg-php-gray-dark">
-                                        <pre class="overflow-x-auto whitespace-pre-line md:whitespace-pre"><code x-text="operator.code"></code></pre>
+                                        <pre class="overflow-x-auto whitespace-pre-line md:whitespace-pre"><code x-html="operator.code"></code></pre>
                                         <div class="absolute flex top-0 right-0 py-3 px-3 text-xs opacity-35">
                                             <span><svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
                                                     viewBox="0 0 22 13">
@@ -108,47 +108,4 @@
             </template>
         </main>
     </div>
-    <script>
-        document.addEventListener('alpine:init', () => {
-            Alpine.data('operators', () => ({
-                operators: {!! $operators->toJson() !!},
-                operatorsByCategory: [],
-                currentOperatorSlug: '{{ $currentOperatorSlug }}',
-                search: '',
-                init() {
-                    this.operatorsByCategory = Object.groupBy(this.operators, (operator) => operator.category);
-
-                    this.$nextTick(this.scrollToCurrent);
-
-                    this.$watch('currentOperatorSlug', () => {
-                        const path = this.currentOperatorSlug ? `/operators/${this.currentOperatorSlug}` : '/';
-                        window.history.replaceState({}, null, path);
-                    });
-
-                    this.$watch('search', () => {
-                        const operators = this.search
-                            ? this.operators.filter((operator) => [...operator.tags, operator.title].join(' ').includes(this.search))
-                            : this.operators;
-
-                        this.operatorsByCategory = Object.groupBy(operators, (operator) => operator.category);
-                    });
-                },
-                selectOperator(slug) {
-                    if (this.currentOperatorSlug === slug) {
-                        this.currentOperatorSlug = '';
-                    } else {
-                        this.currentOperatorSlug = slug;
-                    }
-                },
-                random() {
-                    this.currentOperatorSlug = this.operators[Math.floor(Math.random() * this.operators.length)].slug;
-
-                    this.$nextTick(this.scrollToCurrent);
-                },
-                scrollToCurrent() {
-                    window.scrollTo(0, document.querySelector('[data-operator-contents]').offsetTop - 300);
-                },
-            }));
-        });
-    </script>
 </x-layouts.app>

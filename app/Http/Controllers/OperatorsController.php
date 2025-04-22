@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Data\OperatorData;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Spatie\Sheets\Facades\Sheets;
@@ -18,27 +19,7 @@ class OperatorsController
             : null;
 
         return view('operators', [
-            'operators' => $operators->map(fn (Sheet $sheet) => [
-                ...$sheet->toArray(),
-                'contents' => $sheet->contents->toHtml(),
-                'related' => collect($sheet->related)
-                    ->map(function (string $related) use ($operators) {
-                        $relatedOperator = $operators->firstWhere('slug', $related);
-
-                        // @todo Fix content exceptions
-                        // ?? throw new Exception("Operator with slug `{$related}` does not exist.");
-
-                        if (! $relatedOperator) {
-                            return null;
-                        }
-
-                        return [
-                            'title' => $relatedOperator->title,
-                            'slug' => $relatedOperator->slug,
-                        ];
-                    })
-                    ->filter(),
-            ]),
+            'operators' => $operators->map(fn (Sheet $sheet) => OperatorData::fromSheet($sheet, $operators)->toArray()),
             'currentOperatorSlug' => $currentOperatorSlug,
             'title' => str($currentOperator?->teaser ?? '')->stripTags(),
             'description' => str($currentOperator?->contents ?? '')->stripTags()->trim(),

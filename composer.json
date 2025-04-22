@@ -13,6 +13,7 @@
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.5",
         "spatie/browsershot": "^5.0",
+        "spatie/laravel-data": "^4.15",
         "spatie/sheets": "^1.12",
         "tempest/highlight": "^2.11"
     },
