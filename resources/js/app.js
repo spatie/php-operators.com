@@ -1,11 +1,21 @@
-import Alpine from 'alpinejs'
-import persist from '@alpinejs/persist'
+import Alpine from 'alpinejs';
+import persist from '@alpinejs/persist';
 
-Alpine.data('operators', ({ operators, currentOperatorSlug }) => ({
+Alpine.data('operators', ({ operators, currentOperatorSlug, empty }) => ({
     operators,
     currentOperatorSlug,
+    empty,
     visibleOperatorsByCategory: [],
     search: '',
+    badJokes: [
+        "Have you heard the one about the statistician? Probably.",
+        "Why do plants hate math? Because it gives them square roots.",
+        "Which snakes are good at math? Adders.",
+        "How do you solve any equation? Multiply both sides by zero.",
+        "Do you know what’s odd? Every other number!",
+        "What are ten things you can always count on? Your fingers.",
+    ],
+    currentJoke: '',
     init() {
         this.setVisibleOperators();
 
@@ -28,6 +38,13 @@ Alpine.data('operators', ({ operators, currentOperatorSlug }) => ({
             : this.operators;
 
         this.visibleOperatorsByCategory = Object.groupBy(operators, (operator) => operator.category);
+
+        this.empty = operators.length === 0;
+
+        if (this.empty) {
+            this.currentJoke = this.badJokes[Math.floor(Math.random() * this.badJokes.length)];
+        }
+
     },
     selectOperator(slug) {
         if (this.currentOperatorSlug === slug) {

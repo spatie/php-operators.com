@@ -42,6 +42,14 @@
         </header>
 
         <main class="main">
+
+            <template x-if="empty">
+                <div class="py-24 px-12 space-y-8 text-center">
+                    <h2 class="text-lg text-balance">Oops, no-perator found. Have a joke instead.</h2>
+                    <p class="text-php-purple" x-text="currentJoke"></p>
+                </div>
+            </template>
+
             <template x-for="[category, operators] in Object.entries(visibleOperatorsByCategory)">
                 <section class="max-w-5xl mx-auto my-12 first:mt-12 md:first:mt-36">
                     <div class="px-12">
@@ -113,6 +121,7 @@
                     </template>
                 </section>
             </template>
+
         </main>
     </div>
 </x-layouts.app>
