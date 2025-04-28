@@ -6,10 +6,10 @@ tags: ["<", less, than]
 related: ["less-than-or-equal", "greater-than", "greater-than-or-equal"]
 ---
 
-```php
-2 < 3; // true
+Check if the value to the left is less than the value to the right.
 
-// This comparison uses loose type checks and juggles types:
-2 < 2.0; // false
-2 < '2'; // false
+```php
+2 < 3;   // true
+2 < '3'; // false
+2 < 3.0; // false
 ```

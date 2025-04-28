@@ -6,7 +6,7 @@ tags: [+, add, sum]
 related: ["positive-number-conversion", "addition-assignment", "increment-and-return", "return-and-increment", "subtraction"]
 ---
 
-Add two numbers together.
+Calculate the sum of two numbers.
 
 ```php
 $a = 1 + 3; // 4

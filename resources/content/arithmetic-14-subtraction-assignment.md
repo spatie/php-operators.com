@@ -6,7 +6,7 @@ tags: [-=, subtraction, assignment, shorthand]
 related: ["subtraction", "addition-assignment"]
 ---
 
-Shorthand for `$a = $a - $b`
+Subtract a number and reassign the variable to the new value.
 
 ```php
 $a = 2;

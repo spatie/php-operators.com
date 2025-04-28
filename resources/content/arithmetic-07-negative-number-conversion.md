@@ -7,7 +7,7 @@ tags: [-$a, convert, invert]
 related: ["subtraction", "positive-number-conversion"]
 ---
 
-When using the `-` operator in front of a variable, that variable will be cast to a number and it's sign will be inverted.
+Reverse the sign of a number a number.
 
 ```php
 $a = '1';

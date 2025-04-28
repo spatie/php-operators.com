@@ -6,14 +6,15 @@ tags: [xor, comparison, logical]
 related: ["logical-and", "logical-or", "logical-not"]
 ---
 
+Check if one of the conditions is truthy.
+
 ```php
-true xor false; // true
-false xor true; // true
-true xor true; // false
+true xor false;  // true
+false xor true;  // true
+true xor true;   // false
 false xor false; // false
 
-// Also works with truthy and falsy values:
-1 xor 0; // true
-1 xor '1'; // false
-0 xor ''; // false
+1 xor 0;         // true
+1 xor '1';       // false
+0 xor '';        // false
 ```

@@ -6,7 +6,7 @@ tags: [/=, divide, shorthand]
 related: ["division", "multiplication-assignment", "modulo-assignment"]
 ---
 
-Shorthand for `$a = $a / $b`
+Divide a number and reassign the variable to the new value.
 
 ```php
 $a = 2;

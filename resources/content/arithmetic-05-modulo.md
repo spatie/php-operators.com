@@ -6,7 +6,7 @@ tags: ["%", module, remainder]
 related: ["modulo-assignment", "division"]
 ---
 
-Remainder of `$a` divided by `$b`
+Calculate the remainder of two numbers.
 
 ```php
 $a = 6 % 4; // 2

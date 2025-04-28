@@ -6,7 +6,7 @@ tags: [+$a, convert]
 related: ["addition", "negative-number-conversion"]
 ---
 
-When using the `+` operator in front of a variable, that variable will be cast to a number.
+Cast a variable to a number.
 
 ```php
 $a = '1';

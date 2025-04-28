@@ -6,7 +6,7 @@ tags: ["%=", shorthand]
 related: ["modulo", "division-assignment"]
 ---
 
-Shorthand for `$a = $a % $b`
+Calculate the remainder of a number and reassign the variable to the new value.
 
 ```php
 $a = 6;

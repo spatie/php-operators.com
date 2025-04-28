@@ -6,4 +6,12 @@ tags: ["??="]
 related: ["null-coalescing"]
 ---
 
-Shorthand for `$a = $a ?? $b`
+Reassign the left variable to a value if it's unset or null.
+
+```php
+$name = null;
+$name ??= 'Mark'; // Mark
+
+$name = 'Irving';
+$name ??= 'Mark'; // Irving
+```

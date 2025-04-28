@@ -6,7 +6,7 @@ tags: ["<<"]
 related: ["bitshift-left-assignment", "bitshift-right"]
 ---
 
-This operator shift the bits of the first operand to the left by the number of positions specified in the second operand. 
+Shift the bits of the first operand to the left by the number of positions specified in the second operand.
 
 ```php
 // Binary representation of 5: 00000101

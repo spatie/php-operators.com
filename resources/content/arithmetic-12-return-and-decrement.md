@@ -6,7 +6,7 @@ tags: [$a--, decrement]
 related: ["decrement-and-return", "return-and-increment"]
 ---
 
-Return `$a`, then decrement by one.
+Return a variable and decrement it by one after.
 
 ```php
 $a = 1;

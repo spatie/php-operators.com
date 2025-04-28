@@ -6,11 +6,12 @@ tags: ["||", comparison, logical, or]
 related: ["logical-or-alt", "logical-and", "logical-not"]
 ---
 
+Check if any condition is truthy.
+
 ```php
-true || false; // true
+true || false;  // true
 false || false; // false
 
-// Also works with truthy and falsy values:
-1 || 0; // true
-0 || ''; // false
+1 || 0;         // true
+0 || '';        // false
 ```

@@ -6,7 +6,7 @@ tags: ["*=", multiply, multiplication, assignment, shorthand]
 related: ["multiplication", "division-assignment"]
 ---
 
-Shorthand for `$a = $a * $b`
+Multiply a number and reassign the variable to the new value.
 
 ```php
 $a = 2;

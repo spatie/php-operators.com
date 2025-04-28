@@ -6,7 +6,7 @@ tags: [/, divide]
 related: ["division-assignment", "multiplication"]
 ---
 
-Divide two numbers
+Calculate the result of dividing one number by another.
 
 ```php
 $a = 6 / 3; // 2

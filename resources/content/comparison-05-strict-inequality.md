@@ -6,9 +6,10 @@ tags: ["!==", inequality, strict]
 related: ["loose-inequality", "strict-equality"]
 ---
 
-```php
-2 !== '2'; // true
-2 !== 2; // false
+Check inequality without type juggling.
 
+```php
+2 !== 2;   // false
+2 !== '2'; // true
 2 !== 2.0; // true
 ```

@@ -6,7 +6,7 @@ tags: ["~"]
 related: ["binary-and", "binary-or", "binary-xor"]
 ---
 
-Binary not: also switches the sign
+Binary "not" operation.
 
 ```php
 $a = 0b01;

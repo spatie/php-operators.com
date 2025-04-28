@@ -6,7 +6,7 @@ tags: [++$a, increment]
 related: ["return-and-increment", "decrement-and-return"]
 ---
 
-Increment `$a` by one, then return it.
+Increment a variable by one and return it.
 
 ```php
 $a = 1;

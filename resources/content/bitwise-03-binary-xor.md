@@ -6,7 +6,7 @@ tags: ["^"]
 related: ["binary-xor-assignment", "binary-and", "binary-or", "binary-not"]
 ---
 
-Binary xor
+Binary "xor" operation.
 
 ```php
 $a = 0b01;

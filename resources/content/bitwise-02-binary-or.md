@@ -6,7 +6,7 @@ tags: ["|"]
 related: ["binary-or-assignment", "binary-and", "binary-xor", "binary-not"]
 ---
 
-Binary or
+Binary "or" operation.
 
 ```php
 $a = 0b01;

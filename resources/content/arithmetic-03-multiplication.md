@@ -6,7 +6,7 @@ tags: ["*", multiply]
 related: ["multiplication-assignment", "division"]
 ---
 
-Multiply two numbers
+Calculate the product of two numbers.
 
 ```php
 $a = 2 * 3; // 6
