@@ -8,4 +8,4 @@ This web app is built with Laravel, Alpine.js, and Tailwind CSS. Content is stor
 
 ## Contributing
 
-Found a typo? Does an example need clarification? Want to do some maintenance? We love PR's!
+Found a typo? Does an example need clarification? Want to do some maintenance? We love pull requests!
