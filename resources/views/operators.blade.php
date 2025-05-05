@@ -123,6 +123,15 @@
                 </section>
             </template>
 
+            <section class="max-w-5xl mx-auto my-12 mt-16 text-sm/relaxed">
+                <div class="px-12 text-php-violet">
+                    <div class="pt-4 space-y-2 border-t-2 border-php-purple/20">
+                        <h2 class="font-bold text-php-purple-light">What are PHP Operators?</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet hic et sapiente libero, ut numquam tempore rem nulla esse voluptates eveniet dolorum veniam minima nostrum reiciendis. Dolorum quisquam est nisi.</p>
+                    </div>
+                </div>
+            </section>
+
         </main>
     </div>
 </x-layouts.app>
