@@ -27,7 +27,7 @@
 
         <meta property="og:title" content="{{ isset($title) && (string) $title ? $title.' | ' : '' }}PHP Operators" />
         <meta property="og:description" content="{{ $description ?? 'Learn more about each of the PHP operators. Click on an operator to read how it works and see code examples, or enter a search term to filter the list.' }}" />
-        <meta property="og:image" content="{{ $image ?? asset('social.png') }}" />
+        <meta property="og:image" content="{{ $image ?? asset('php_operators_og.png') }}" />
         <meta property="og:author" content="Spatie" />
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
