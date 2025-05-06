@@ -53,7 +53,7 @@
     @media screen(md) {
         .main {
             min-height: calc(100svh - theme('spacing.24'));
-            margin-top: theme('spacing.24');
+            margin-top: theme('spacing.32');
         }
     }
 
