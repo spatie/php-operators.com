@@ -30,13 +30,16 @@ class OperatorsContentParser extends MarkdownWithFrontMatterParser
         }
 
         $descriptionContents = substr($contents, 0, $codePosition);
-        $codeContents = substr($contents, $codePosition);
+        $codeContents = html_entity_decode(substr($contents, $codePosition));
 
         if (trim($codeContents) && ! str_ends_with(trim($codeContents), '</pre>')) {
             throw new Exception('Invalid contents. Contents must contain a description and end with a code snippet. Contents: '.$contents);
         }
 
-        $highlightedCode = resolve(Highlighter::class)->parse(strip_tags(html_entity_decode($codeContents)), 'php');
+        $codeContentsExcludingWrapper = preg_replace("/<pre.*?>(.*)?<\/pre>/mis", '$1', $codeContents);
+        $codeContentsExcludingWrapper = preg_replace("/<code.*?>(.*)?<\/code>/mis", '$1', $codeContentsExcludingWrapper);
+
+        $highlightedCode = resolve(Highlighter::class)->parse($codeContentsExcludingWrapper, 'php');
 
         return [
             ...$parsed,
