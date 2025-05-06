@@ -34,7 +34,10 @@ Alpine.data('operators', ({ operators, currentOperatorSlug, empty }) => ({
     },
     setVisibleOperators() {
         const operators = this.search
-            ? this.operators.filter((operator) => [...operator.tags, operator.title].join(' ').includes(this.search))
+            ? this.operators.filter((operator) => {
+                const searchString = [...operator.tags, operator.teaser, operator.title].join(' ').toLowerCase();
+                return searchString.includes(this.search.toLowerCase());
+            })
             : this.operators;
 
         this.visibleOperatorsByCategory = Object.groupBy(operators, (operator) => operator.category);
