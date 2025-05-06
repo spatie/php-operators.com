@@ -123,15 +123,18 @@
                 </section>
             </template>
 
-            <section class="max-w-5xl mx-auto my-12 mt-16 text-sm/relaxed">
-                <div class="px-12 text-php-violet">
+            <section class="max-w-5xl mx-auto my-12 mt-16 text-sm/relaxed group">
+                <div class="px-12 text-php-violet-dark lg:text-php-violet lg:group-hover:text-php-violet-dark transition-colors duration-300">
                     <div class="pt-4 space-y-2 border-t-2 border-php-purple/20">
-                        <h2 class="font-bold text-php-purple-light">What are PHP Operators?</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet hic et sapiente libero, ut numquam tempore rem nulla esse voluptates eveniet dolorum veniam minima nostrum reiciendis. Dolorum quisquam est nisi.</p>
+                        <h2 class="font-bold text-php-purple-light">What is this? Who are you!? <span class="hidden lg:inline">Hover me!</span></h2>
                     </div>
+                        <p>
+                            PHP Operators is a reference guide for operators old and new in the PHP programming language.
+                            We're SPATIE, a web development agency from Belgium.
+                            Besides client work we like to <a href="https://spatie.be/open-source" target="_blank" class="underline">contribute to the open source community</a> and make fun projects like this one.
+                        </p>
                 </div>
             </section>
-
         </main>
     </div>
 </x-layouts.app>
