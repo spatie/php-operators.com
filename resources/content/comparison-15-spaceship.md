@@ -2,7 +2,7 @@
 title: "$a <=> $b"
 teaser: "Spaceship operator"
 category: comparison
-tags: ["<=>", compare, sort, ufo]
+tags: ["\<=\>", compare, sort, ufo]
 related: ["ternary", "less-than", "greater-than", "loose-equality"]
 ---
 
