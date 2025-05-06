@@ -123,10 +123,10 @@
                 </section>
             </template>
 
-            <section class="max-w-5xl mx-auto my-12 mt-16 text-sm/relaxed group">
-                <div class="px-12 text-php-violet-dark lg:text-php-violet lg:group-hover:text-php-violet-dark transition-colors duration-300">
+            <section class="max-w-5xl mx-auto my-12 mt-16 text-sm/relaxed">
+                <div class="px-12 text-php-violet-dark dark:text-php-violet">
                     <div class="pt-4 space-y-2 border-t-2 border-php-purple/20">
-                        <h2 class="font-bold text-php-purple-light">What is this? Who are you!? <span class="hidden lg:inline">Hover me!</span></h2>
+                        <h2 class="font-bold text-php-purple dark:text-php-purple-light">What is this? Who are you!? <span class="hidden lg:inline">Hover me!</span></h2>
                     </div>
                         <p>
                             PHP Operators is a reference guide for operators old and new in the PHP programming language.
