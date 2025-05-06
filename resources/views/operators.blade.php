@@ -19,7 +19,7 @@
                 <div class="relative h-12 w-full">
                     <input
                         x-model="search"
-                        class="bg-php-violet rounded-full px-6 w-full h-full focus:ring-2 ring-inset ring-php-purple/15 outline-none placeholder:text-php-purple-dark/50 dark:bg-php-gray-light dark:placeholder:text-white/50 dark:ring-php-purple/50"
+                        class="bg-php-violet rounded-full pl-6 pr-14 w-full h-full focus:ring-2 ring-inset ring-php-purple/15 outline-none placeholder:text-php-purple-dark/50 dark:bg-php-gray-light dark:placeholder:text-white/50 dark:ring-php-purple/50"
                         type="text"
                         placeholder="Find out more about a PHP operator"
                     />
