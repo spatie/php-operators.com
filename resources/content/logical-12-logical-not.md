@@ -1,8 +1,8 @@
 ---
 title: "!$a"
 teaser: "Logical not"
-category: comparison
-tags: ["!", comparison, logical, not]
+category: logical
+tags: ["!", not]
 related: ["logical-and", "logical-or"]
 ---
 

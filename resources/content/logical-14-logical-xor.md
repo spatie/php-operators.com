@@ -1,8 +1,8 @@
 ---
 title: $a xor $b
 teaser: "Logical xor"
-category: comparison
-tags: [xor, comparison, logical]
+category: logical
+tags: [xor]
 related: ["logical-and", "logical-or", "logical-not"]
 ---
 

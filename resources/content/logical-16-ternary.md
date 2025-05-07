@@ -1,7 +1,7 @@
 ---
 title: "$a ? $b : $c"
 teaser: "Ternary operator"
-category: comparison
+category: logical
 tags: ["?:", ternary]
 related: ["null-coalescing"]
 ---

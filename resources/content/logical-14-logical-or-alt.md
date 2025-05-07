@@ -1,8 +1,8 @@
 ---
 title: $a or $b
 teaser: "Alternative logical or"
-category: comparison
-tags: ["or", comparison, logical, "||"]
+category: logical
+tags: ["or", "||"]
 related: ["logical-and", "logical-or", "logical-not"]
 ---
 

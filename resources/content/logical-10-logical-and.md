@@ -1,8 +1,8 @@
 ---
 title: $a && $b
 teaser: "Logical and"
-category: comparison
-tags: ["&&", comparison, logical, and]
+category: logical
+tags: ["&&", and]
 related: ["logical-and-alt", "logical-or", "logical-not"]
 ---
 
