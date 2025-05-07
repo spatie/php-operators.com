@@ -6,7 +6,7 @@ tags: [xor, comparison, logical]
 related: ["logical-and", "logical-or", "logical-not"]
 ---
 
-Check if one of the conditions is truthy.
+Check if only one of the conditions is truthy.
 
 ```php
 true xor false;  // true
