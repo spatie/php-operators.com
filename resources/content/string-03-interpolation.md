@@ -10,8 +10,8 @@ Return a variable as a substring of a string. Curly braces are optional. Not sup
 
 ```php
 $name = 'Nimrod';
-"Hello, $name"; // "Hello, Nimrod!"
+"Hello, $name!"; // "Hello, Nimrod!"
 
 $name = 'Pedro';
-"Hello, {$name}"; // "Hello, Pedro!"
+"Hello, {$name}!"; // "Hello, Pedro!"
 ```
