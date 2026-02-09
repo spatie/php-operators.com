@@ -10,6 +10,6 @@ Check if the value to the left is less than the value to the right.
 
 ```php
 2 < 3;   // true
-2 < '3'; // false
-2 < 3.0; // false
+2 < '3'; // true
+2 < 3.0; // true
 ```
