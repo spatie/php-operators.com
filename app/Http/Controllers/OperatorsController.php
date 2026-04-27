@@ -27,7 +27,7 @@ class OperatorsController
         ]);
     }
 
-    /** @return \Illuminate\Support\Collection<Sheet> */
+    /** @return Collection<Sheet> */
     private function getSheets(): Collection
     {
         return Cache::flexible(
