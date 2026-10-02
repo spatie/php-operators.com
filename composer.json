@@ -12,6 +12,7 @@
         "laravel/tinker": "^3.0",
         "spatie/browsershot": "^5.0",
         "spatie/laravel-data": "^4.15",
+        "spatie/laravel-flare": "^3.6",
         "spatie/sheets": "^1.12",
         "tempest/highlight": "^2.11"
     },
