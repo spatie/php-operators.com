@@ -2,7 +2,8 @@
 
 it('renders the index', function () {
     $this->get('/')
-        ->assertStatus(200);
+        ->assertStatus(200)
+        ->assertSee('"@context": "https://schema.org"', escape: false);
 });
 
 $slugs = array_filter(array_map(function (string $filename) {

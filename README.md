@@ -9,3 +9,7 @@ This web app is built with Laravel, Alpine.js, and Tailwind CSS. Content is stor
 ## Contributing
 
 Found a typo? Does an example need clarification? Want to do some maintenance? We love pull requests!
+
+## Social images
+
+The social images in `public/og` are committed. After adding or changing an operator, regenerate its image with `php artisan app:generate-social-images {slug} --force` and commit the result.
