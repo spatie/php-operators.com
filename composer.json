@@ -8,7 +8,7 @@
     "require": {
         "php": "^8.5",
         "gehrisandro/tailwind-merge-laravel": "^1.2",
-        "laravel/framework": "^13.0",
+        "laravel/framework": "^13.38.0",
         "laravel/tinker": "^3.0",
         "spatie/browsershot": "^5.0",
         "spatie/laravel-data": "^4.15",
