@@ -3798,16 +3798,16 @@
         },
         {
             "name": "spatie/browsershot",
-            "version": "5.4.0",
+            "version": "5.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/browsershot.git",
-                "reference": "dcf7a65fd1d0fc8fd113739b84982377728d0b2f"
+                "reference": "ac49e212c5ef4b9725589dd95bff7a5f0f92a0b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/browsershot/zipball/dcf7a65fd1d0fc8fd113739b84982377728d0b2f",
-                "reference": "dcf7a65fd1d0fc8fd113739b84982377728d0b2f",
+                "url": "https://api.github.com/repos/spatie/browsershot/zipball/ac49e212c5ef4b9725589dd95bff7a5f0f92a0b3",
+                "reference": "ac49e212c5ef4b9725589dd95bff7a5f0f92a0b3",
                 "shasum": ""
             },
             "require": {
@@ -3818,7 +3818,7 @@
                 "symfony/process": "^6.0|^7.0|^8.0"
             },
             "require-dev": {
-                "pestphp/pest": "^3.0|^4.0",
+                "pestphp/pest": "^3.0|^4.0|^5.0",
                 "spatie/image": "^3.6",
                 "spatie/pdf-to-text": "^1.52",
                 "spatie/phpunit-snapshot-assertions": "^5.0"
@@ -3854,7 +3854,7 @@
                 "webpage"
             ],
             "support": {
-                "source": "https://github.com/spatie/browsershot/tree/5.4.0"
+                "source": "https://github.com/spatie/browsershot/tree/5.4.1"
             },
             "funding": [
                 {
@@ -3862,7 +3862,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-05-26T13:13:33+00:00"
+            "time": "2026-10-19T07:49:39+00:00"
         },
         {
             "name": "spatie/flare-client-php",
@@ -7158,16 +7158,16 @@
         },
         {
             "name": "tempest/highlight",
-            "version": "2.28.1",
+            "version": "2.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tempestphp/highlight.git",
-                "reference": "e04f3d4dd65a7ce3456537584e38cec2eedddd3b"
+                "reference": "3d96482ee77208c8e445d4f68667918c7f440f62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tempestphp/highlight/zipball/e04f3d4dd65a7ce3456537584e38cec2eedddd3b",
-                "reference": "e04f3d4dd65a7ce3456537584e38cec2eedddd3b",
+                "url": "https://api.github.com/repos/tempestphp/highlight/zipball/3d96482ee77208c8e445d4f68667918c7f440f62",
+                "reference": "3d96482ee77208c8e445d4f68667918c7f440f62",
                 "shasum": ""
             },
             "require": {
@@ -7205,7 +7205,7 @@
             "description": "Fast, extensible, server-side code highlighting",
             "support": {
                 "issues": "https://github.com/tempestphp/highlight/issues",
-                "source": "https://github.com/tempestphp/highlight/tree/2.28.1"
+                "source": "https://github.com/tempestphp/highlight/tree/2.29.0"
             },
             "funding": [
                 {
@@ -7213,7 +7213,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-09-30T07:52:23+00:00"
+            "time": "2026-10-20T08:16:58+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
